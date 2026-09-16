@@ -24,21 +24,14 @@ interface Post {
 }
 
 const PostsPage: React.FC = () => {
-  // 1: Crear el estado para almacenar publicaciones.
   const [posts, setPosts] = useState<Post[]>([]);
-
-  // 2: Crear el estado para saber si los datos se están cargando.
   const [cargando, setCargando] = useState<boolean>(false);
-
-  // 3: Crear el estado para almacenar errores.
   const [error, setError] = useState<string>("");
 
   const cargarPosts = () => {
-    // - Indicar que comenzó la carga y limpiar errores previos
     setCargando(true);
     setError("");
 
-    // - Utilizar fetch() para consultar la API
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((response) => {
         if (!response.ok) {
@@ -47,7 +40,6 @@ const PostsPage: React.FC = () => {
         return response.json();
       })
       .then((datos) => {
-        // - Guardar los datos en el estado
         setPosts(datos);
       })
       .catch((err) => {
@@ -79,7 +71,7 @@ const PostsPage: React.FC = () => {
           </IonButton>
         </div>
 
-        {/* 5: Mostrar un IonSpinner mientras se realiza la petición. */}
+        {}
         {cargando && (
           <div className="estado" style={{ textAlign: "center", margin: "20px 0" }}>
             <IonSpinner name="crescent" />
@@ -87,7 +79,7 @@ const PostsPage: React.FC = () => {
           </div>
         )}
 
-        {/* 6: Mostrar el mensaje de error cuando corresponda. */}
+        {}
         {error && (
           <IonText color="danger" style={{ textAlign: "center", display: "block" }}>
             <p>{error}</p>
@@ -95,7 +87,7 @@ const PostsPage: React.FC = () => {
         )}
 
         <div className="posts-container">
-          {/* 7: Recorrer las publicaciones utilizando posts.map(...) */}
+          {}
           {posts.map((post) => (
             <IonCard key={post.id}>
               <IonCardHeader>
