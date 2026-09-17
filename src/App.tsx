@@ -3,9 +3,7 @@ import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 /*import Home from './pages/PostsPage'; */
 
-import RickAndMortyPage from './pages/RickAndMortyPage'; /* Aquí iba el nombre del archivo RickAndMorty.tsx
-import RickAndMortyPage from './pages/PostsPage';
-*/ 
+import RickAndMortyPage from './pages/RickAndMortyPage';
 
 import '@ionic/react/css/core.css';
 
