@@ -23,3 +23,16 @@ Se implementó una función asíncrona `cargarPersonajes` accionada mediante un 
 
 ## **Interfaz:** 
 El enrutamiento global está centralizado en `App.tsx` direccionando a la vista `RickAndMortyPage.tsx`. Los datos se renderizan dinámicamente mediante el método `.map()`, construyendo tarjetas informativas (`IonCard`) donde se distingue el estado vital del personaje (`status`) con badges de colores condicionales (`IonBadge` en `success`, `danger` o `medium`), la especie, imagen y ubicación actual.
+
+
+## Capturas de Pantalla
+
+### Pantalla de Inicio
+Esta es la vista inicial de la aplicación antes de cargar los datos:
+
+![Pantalla de inicio vacía](./captura-inicio.png)
+
+### Personajes Cargados
+Así se visualiza la aplicación tras presionar el botón y obtener los datos de la API:
+
+![Vista de personajes cargados](./captura-personajes.png)
